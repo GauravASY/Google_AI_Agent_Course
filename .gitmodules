@@ -1,0 +1,3 @@
+[submodule "basic_agents"]
+	path = basic_agents
+	url = https://github.com/GauravASY/Google_AI_Agents_course.git
