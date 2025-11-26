@@ -1,12 +1,16 @@
+import asyncio
+from dotenv import load_dotenv
 from agent import root_agent
 from google.adk.runners import InMemoryRunner
+load_dotenv()
 
-def main():
+async def main():
     print("Hello from mcp!")
     runner = InMemoryRunner(agent=root_agent)
-    response = runner.run(input="What is the sum of 8 and 32?")
+    response = await runner.run_debug("What is the sum of 8 and 32?")
     print("Response:", response)
 
 
 if __name__ == "__main__":
-    main()
+    asyncio.run(main())
+    # 
